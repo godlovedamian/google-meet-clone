@@ -90,6 +90,15 @@
             const meetingUrl = `${window.location.origin}?meetingID=${joinValue}`;
             window.location.replace(meetingUrl);
         })
+        /**
+         * When the user clicks on the new meeting button, a new meeting code is generated
+         * and the user is redirected to the new meeting page
+         */
+        $(document).on('click', '.new-meeting', function () {
+            let eightDigitValue = Math.floor(Math.random() * 100000000);
+            const meetingUrl = `${window.location.origin}?meetingID=${eightDigitValue}`;
+            window.location.replace(meetingUrl);
+        })
     })
 </script>
 </body>

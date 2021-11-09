@@ -81,6 +81,15 @@
             $('.enter-code').focus();
         })
 
+        /**
+         * When the user clicks on the join button, the code from meeting code text input is sent to the server
+         * and the user is redirected to the meeting page
+         */
+        $(document).on('click', '.join-action', function () {
+            const joinValue = $('.enter-code').val();
+            const meetingUrl = `${window.location.origin}?meetingID=${joinValue}`;
+            window.location.replace(meetingUrl);
+        })
     })
 </script>
 </body>

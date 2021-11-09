@@ -80,14 +80,13 @@
         $(document).on('click', '.join-meeting', function () {
             $('.enter-code').focus();
         })
-
         /**
          * When the user clicks on the join button, the code from meeting code text input is sent to the server
          * and the user is redirected to the meeting page
          */
         $(document).on('click', '.join-action', function () {
-            const joinValue = $('.enter-code').val();
-            const meetingUrl = `${window.location.origin}?meetingID=${joinValue}`;
+            const meetingCode = $('.enter-code').val();
+            const meetingUrl = `${window.location.origin}?meetingID=${meetingCode}`;
             window.location.replace(meetingUrl);
         })
         /**
@@ -95,8 +94,8 @@
          * and the user is redirected to the new meeting page
          */
         $(document).on('click', '.new-meeting', function () {
-            let eightDigitValue = Math.floor(Math.random() * 100000000);
-            const meetingUrl = `${window.location.origin}?meetingID=${eightDigitValue}`;
+            let newMeetingCode = Math.floor(Math.random() * 100000000);
+            const meetingUrl = `${window.location.origin}?meetingID=${newMeetingCode}`;
             window.location.replace(meetingUrl);
         })
     })

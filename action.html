@@ -28,10 +28,12 @@
                 <a href="#" class="nav-link">Sign in</a>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold">Join the meeting</button>
+                <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold join-meeting">Join the
+                    meeting
+                </button>
             </li>
             <li class="nav-item">
-                <button class="btn btn-lg btn-info text-light font-weight-bold">Start a meeting</button>
+                <button class="btn btn-lg btn-info text-light font-weight-bold new-meeting">Start a meeting</button>
             </li>
         </ul>
     </div>
@@ -45,17 +47,19 @@
         </p>
         <ul class="display-center justify-content-start">
             <li style="padding: 0;">
-                <button class="btn btn-lg text-light font-weight-bold display-center" style="background-color: #01796B">
+                <button class="btn btn-lg text-light font-weight-bold display-center new-meeting"
+                        style="background-color: #01796B">
                     <span class="material-icons mr-2">video_call</span>New Meeting
                 </button>
             </li>
             <li class="pl-3"></li>
-                <button class="btn btn-lg btn-outline-secondary text-dark font-weight-bold display-center"
-                        style="background-color: #ffffff">
-                    <span class="material-icons mr-2">keyboard</span><input type="text" placeholder="Enter a code"
-                                                                            style="border: none;"></button>
+            <button class="btn btn-lg btn-outline-secondary text-dark font-weight-bold display-center"
+                    style="background-color: #ffffff">
+                <span class="material-icons mr-2">keyboard</span><input type="text" placeholder="Enter a code"
+                                                                        style="border: none;" class="enter-code">
+            </button>
             </li>
-            <li class="text-dark pl-2 font-weight-bold cursor-pointer">
+            <li class="text-dark pl-2 font-weight-bold cursor-pointer join-action">
                 Join
             </li>
         </ul>
@@ -69,5 +73,15 @@
         Learn more about <span class="learn-more text-info">google meet</span>.
     </h6>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        //focus on the meeting code text input whenever the user clicks on the join meeting button
+        $(document).on('click', '.join-meeting', function () {
+            $('.enter-code').focus();
+        })
+
+    })
+</script>
 </body>
 </html>

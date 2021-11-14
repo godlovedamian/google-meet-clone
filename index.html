@@ -32,7 +32,7 @@
 <main class="d-flex flex-column home-wrap">
     <div class="g-top text-light">
         <div class="top-remote-video-show-wrap d-flex">
-            <div id="meetingContainer" class="w-75" style="display: none;">
+            <div id="meetingContainer" style="display: none; flex-basis: 75%;">
                 <div class="call-wrap" style="background-color: #000000"></div>
                 <div class="video-wrap" id="divUsers" style="display: flex; flex-wrap:wrap;">
                     <div class="user-box display-center flex-column" id="me">
@@ -52,6 +52,59 @@
                     </div>
                 </div>
             </div>
+            <div class="g-right details-wrap bg-light text-secondary h-100" style="flex-basis: 25%; z-index: 1;">
+
+                <div class="meeting-heading-wrap d-flex justify-content-between align-items-center"
+                     style="height: 10vh;">
+                    <div class="meeting-heading font-weight-bold">Meeting Details</div>
+                    <div class="meeting-heading-cross display-center cursor-pointer">
+                        <span class="material-icons">clear</span>
+                    </div>
+                </div>
+
+                <div class="people-chat-wrap d-flex justify-content-between align-items-center ml-3 mr-3"
+                     style="height: 10vh; font-size: 14px;">
+                    <div class="people-heading display-center cursor-pointer">
+                        <div class="people-heading-icon display-center mr-1">
+                            <span class="material-icons">people</span>
+                        </div>
+                        <div class="people-heading-text display-center">
+                            Participant <span class="participant-count">(1)</span></div>
+                    </div>
+                    <div class="chat-heading d-flex justify-content-around align-items-center cursor-pointer">
+                        <div class="chat-heading-icon display-center">
+                            <span class="material-icons">message</span>
+                        </div>
+                        <div class="chat-heading-text display-center">
+                            Chat
+                        </div>
+                    </div>
+                </div>
+
+                <div class="in-call-chat-wrap mr-3 ml-3 pl-3 pr-3" style="font-size: 14px; height: 69vh; overflow-y: scroll;">
+                    <div class="in-call-wrap-up" style="display: none !important;">
+
+                    </div>
+                    <div class="chat-show-wrap text-secondary d-flex flex-column justify-content-between h-100" style="font-size: 14px;">
+                        <div class="chat-message-show" id="messages">
+
+                        </div>
+                        <div class="chat-message-sent d-flex justify-content-between align-items-center"
+                             style="margin-bottom: 35%">
+                            <div class="chat-message-sent-input" style="width: 85%">
+                                <input type="text" name="" class="chat-message-sent-input-field w-100" id="msgBox"
+                                       placeholder="Send a message to everyone" style="border: none;"/>
+                            </div>
+                            <div class="chat-message-sent-action display-center" id="btnSend"
+                                 style="width: 15%; color: teal; cursor: pointer;">
+                                <span class="material-icons">send</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         <div class="g-top-left bg-light text-secondary w-25 d-flex align-items-center justify-content-between pl-2 pr-2">
             <div class="top-left-participant-wrap pt-2 cursor-pointer">
@@ -86,7 +139,8 @@
             </div>
         </div>
         <div class="bottom-right d-flex justify-content-center align-items-center mr-3" style="height:10vh;">
-            <div class=" present_now_wrap d-flex justify-content-center flex-column align-items-center mr-5 cursor-pointer" id="btnScreenShareOnOff">
+            <div class=" present_now_wrap d-flex justify-content-center flex-column align-items-center mr-5 cursor-pointer"
+                 id="btnScreenShareOnOff">
                 <span class="material-icons">present_to_all</span>
                 <div>Present Now</div>
             </div>

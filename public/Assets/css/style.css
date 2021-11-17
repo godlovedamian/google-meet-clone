@@ -169,3 +169,23 @@ video {
     /*columns: white;*/
     border: 2px solid white;
 }
+
+.bottom-left{
+    position: relative;
+    padding: 5px;
+}
+
+.g-details{
+    position: absolute;
+    width: 30vw;
+    background-color: white;
+    margin-top: -135px;
+    counter-reset: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.g-details-heading-show{
+    font-size: 14px;
+    padding-left: 10px;
+}

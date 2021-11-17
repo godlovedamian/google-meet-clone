@@ -52,7 +52,8 @@
                     </div>
                 </div>
             </div>
-            <div class="g-right details-wrap bg-light text-secondary h-100" style="flex-basis: 25%; z-index: 1;">
+            <div class="g-right-details-wrap bg-light text-secondary h-100"
+                 style="flex-basis: 25%; z-index: 1; display: none;">
 
                 <div class="meeting-heading-wrap d-flex justify-content-between align-items-center"
                      style="height: 10vh;">
@@ -81,11 +82,29 @@
                     </div>
                 </div>
 
-                <div class="in-call-chat-wrap mr-3 ml-3 pl-3 pr-3" style="font-size: 14px; height: 69vh; overflow-y: scroll;">
+                <div class="in-call-chat-wrap mr-3 ml-3 pl-3 pr-3"
+                     style="font-size: 14px; height: 69vh; overflow-y: scroll;">
                     <div class="in-call-wrap-up" style="display: none !important;">
-
+                        <div class="in-call-wrap d-flex justify-content-between align-items-center mb-3">
+                            <div class="participant-img-name-wrap display-center cursor-pointer">
+                                <div class="participant-img">
+                                    <img src="public/Assets/images/other.jpg" alt="" class="border border-secondary"
+                                         style="height: 40px; width: 40px; border-radius:50%;">
+                                </div>
+                                <div class="participant-name ml-2">You</div>
+                            </div>
+                            <div class="participant-action-wrap display-center">
+                                <div class="participant-action-dot display-center mr-2 cursor-pointer">
+                                    <span class="material-icons">more_vert</span>
+                                </div>
+                                <div class="participant-action-pin display-center mr-2 cursor-pointer">
+                                    <span class="material-icons">push_pin</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="chat-show-wrap text-secondary d-flex flex-column justify-content-between h-100" style="font-size: 14px;">
+                    <div class="chat-show-wrap text-secondary flex-column justify-content-between h-100"
+                         style="font-size: 14px; display: flex;">
                         <div class="chat-message-show" id="messages">
 
                         </div>
@@ -111,7 +130,7 @@
                 <div class="top-left-participant-icon">
                     <span class="material-icons">people</span>"
                 </div>
-                <div class="top-left-participant-count">2</div>
+                <div class="top-left-participant-count participant-count">1</div>
             </div>
             <div class="top-left-chat-wrap pt-2 cursor-pointer">
                 <span class="material-icons">message</span>
@@ -150,6 +169,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="top-box-show" style="display:none;">
+
     </div>
 </main>
 </body>
